@@ -83,6 +83,11 @@
             {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
+                {% if SOCIAL %}
+                  {% for name, link in SOCIAL %}
+                              <li><a href="{{ link }}">{{ name }}</a></li>
+                  {% endfor %}
+                {% endif %}
                 <p>
                 <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
                 &middot;
