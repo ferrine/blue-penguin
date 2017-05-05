@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" media="print" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta name="generator" content="Pelican" />
     <meta name="description" content="{{ SITEDESCRIPTION }}" />
     <meta name="author" content="{{ AUTHOR }}" />
@@ -78,15 +79,19 @@
     {% endif %}
     <div id="wrapper">
         <div id="content">
-            {%- block content -%}{%- endblock %}
+            {%- block content -%}{%- endblock -%}
 
             {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
                 {% if SOCIAL %}
+                <table style="margin: 0 auto">
+                    <tr>
                   {% for name, link in SOCIAL %}
-                              <li><a href="{{ link }}">{{ name }}</a></li>
+                        <td style="padding:0 15px 0 15px; text-align: center"><a href="{{ link }}">{{ name }}</a></td>
                   {% endfor %}
+                    </tr>
+                </table>
                 {% endif %}
                 <p>
                 <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
