@@ -14,7 +14,11 @@
 		{% endif %}                
                 
 
-                {{ article.content }}
+                {% if articles_page %}
+		        {{ article.summary }}
+		        {% else %}
+		        {{ article.content }}
+		        {% endif %}
                 <div class="clear"></div>
 
                 <div class="info">
