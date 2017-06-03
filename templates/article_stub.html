@@ -36,6 +36,6 @@
 		{% if articles_page %}
 		    <a href="{{ SITEURL }}/{{ article.url }}#content">Click to read and post comments</a>
 		{% else %}
-		    {% include "google_comments.html" %}
+		    {% include "disqus.html" %}
 		{% endif %}
             </article>
